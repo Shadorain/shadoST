@@ -6,7 +6,7 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 //static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
-static char *font = "Source Code Pro:pixelsize=14:weight=0:antialias=true:autohint=true";
+static char *font = "Source Code Pro:pixelsize=14:weight=40:antialias=true:autohint=true";
 /* static char *font = "Hack Nerd Font Mono:pixelsize=15:antialias=true:autohint=true"; */
 /* Spare fonts */
 static char *font2[] = {
@@ -124,7 +124,7 @@ float alpha = 0.85;
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
   /* 8 normal colors */
-  [0] = "#000000", /* black   */
+  [0] = "#6272a4", /* black   */
   [1] = "#F37F97", /* red     */
   [2] = "#5ADECD", /* green   */
   [3] = "#8897F4", /* yellow  */
@@ -134,7 +134,8 @@ static const char *colorname[] = {
   [7] = "#bfaae3", /* white   */
 
   /* 8 bright colors */
-  [8]  = "#44475a", /* black   */
+  /* [8]  = "#44475a", /1* black   *1/ */
+  [8]  = "#6272a4", /* black   */
   [9]  = "#FF4971", /* red     */
   [10] = "#18E3C8", /* green   */
   [11] = "#8897F4", /* yellow  */
@@ -145,9 +146,9 @@ static const char *colorname[] = {
 
   /* special colors */
   [256] = "#09090d", /* background */
-  [257] = "#c6b3e6", /* foreground */
+  [257] = "#e3c7fc", /* foreground */
+  [258] = "#c6b3e6", /* foreground */
 };
-
 
 /*
  * Default colors (colorname index)
@@ -155,7 +156,7 @@ static const char *colorname[] = {
  */
 unsigned int defaultfg = 257;
 unsigned int defaultbg = 256;
-static unsigned int defaultcs = 257;
+static unsigned int defaultcs = 258;
 static unsigned int defaultrcs = 257;
 
 /*
