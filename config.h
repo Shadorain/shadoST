@@ -6,13 +6,18 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 //static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
-//static char *font = "Agave:pixelsize=15:antialias=true:autohint=true";
-static char *font = "Hack Nerd Font Mono:pixelsize=15:antialias=true:autohint=true";
+static char *font = "Source Code Pro:pixelsize=14:weight=0:antialias=true:autohint=true";
+/* static char *font = "Hack Nerd Font Mono:pixelsize=15:antialias=true:autohint=true"; */
 /* Spare fonts */
 static char *font2[] = {
-/*	"Inconsolata for Powerline:pixelsize=12:antialias=true:autohint=true", */
-	 //"Hack Nerd Font Mono:pixelsize=11:antialias=true:autohint=true",
+	/* "Inconsolata for Powerline:pixelsize=15:antialias=true:autohint=true", */
+	/* "Hack Nerd Font Mono:pixelsize=15:antialias=true:autohint=true", */
 };
+
+/* disable bold, italic and roman fonts globally */
+int disablebold = 1;
+int disableitalic = 1;
+int disableroman = 1;
 
 static int borderpx = 8;
 
