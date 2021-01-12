@@ -6,12 +6,12 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 //static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
-static char *font = "Source Code Pro:pixelsize=14:weight=40:antialias=true:autohint=true";
+static char *font = "Source Code Pro:pixelsize=12:weight=40:antialias=true:autohint=true";
 /* static char *font = "Hack Nerd Font Mono:pixelsize=15:antialias=true:autohint=true"; */
 /* Spare fonts */
 static char *font2[] = {
 	/* "Inconsolata for Powerline:pixelsize=15:antialias=true:autohint=true", */
-	/* "Hack Nerd Font Mono:pixelsize=15:antialias=true:autohint=true", */
+	"Hack Nerd Font Mono:pixelsize=12:antialias=true:autohint=true",
 };
 
 /* disable bold, italic and roman fonts globally */
@@ -123,31 +123,58 @@ float alpha = 0.8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-  /* 8 normal colors */
-  [0] = "#6272a4", /* black   */
-  [1] = "#F37F97", /* red     */
-  [2] = "#5ADECD", /* green   */
+    /* 8 normal colors */
+  [0] = "#140a1d", /* black   */
+  [1] = "#B52A5B", /* red     */
+  [2] = "#FF4971", /* green   */
   [3] = "#8897F4", /* yellow  */
   [4] = "#bd93f9", /* blue    */
-  [5] = "#ff79c6", /* magenta */
-  [6] = "#8be9fd", /* cyan    */
-  [7] = "#bfaae3", /* white   */
+  [5] = "#E9729D", /* magenta */
+  [6] = "#F18FB0", /* cyan    */
+  [7] = "#f1c4e0", /* white   */
 
   /* 8 bright colors */
-  /* [8]  = "#44475a", /1* black   *1/ */
-  [8]  = "#6272a4", /* black   */
-  [9]  = "#FF4971", /* red     */
-  [10] = "#18E3C8", /* green   */
+  [8]  = "#a8899c",  /* black   */
+  [9]  = "#B52A5B", /* red     */
+  [10] = "#FF4971", /* green   */
   [11] = "#8897F4", /* yellow  */
   [12] = "#bd93f9", /* blue    */
-  [13] = "#ff79c6", /* magenta */
-  [14] = "#8be9fd", /* cyan    */
-  [15] = "#bfaae3", /* white   */
+  [13] = "#E9729D", /* magenta */
+  [14] = "#F18FB0", /* cyan    */
+  [15] = "#f1c4e0", /* white   */
 
   /* special colors */
   [256] = "#09090d", /* background */
+  /* [257] = "#f1c4e0", /1* foreground *1/ */
   [257] = "#e3c7fc", /* foreground */
-  [258] = "#c6b3e6", /* foreground */
+  [258] = "#f1c4e0",     /* cursor */
+
+  /* /1* 8 normal colors *1/ */
+  /* [0] = "#6272a4", /1* black   *1/ */
+  /* [1] = "#F37F97", /1* red     *1/ */
+  /* [2] = "#5ADECD", /1* green   *1/ */
+  /* [3] = "#8897F4", /1* yellow  *1/ */
+  /* [4] = "#bd93f9", /1* blue    *1/ */
+  /* [5] = "#ff79c6", /1* magenta *1/ */
+  /* [6] = "#8be9fd", /1* cyan    *1/ */
+  /* [7] = "#bfaae3", /1* white   *1/ */
+
+  /* /1* 8 bright colors *1/ */
+  /* /1* [8]  = "#44475a", /2* black   *2/ *1/ */
+  /* [8]  = "#6272a4", /1* black   *1/ */
+  /* [9]  = "#FF4971", /1* red     *1/ */
+  /* [10] = "#18E3C8", /1* green   *1/ */
+  /* [11] = "#8897F4", /1* yellow  *1/ */
+  /* [12] = "#bd93f9", /1* blue    *1/ */
+  /* [13] = "#ff79c6", /1* magenta *1/ */
+  /* [14] = "#8be9fd", /1* cyan    *1/ */
+  /* [15] = "#bfaae3", /1* white   *1/ */
+
+  /* /1* special colors *1/ */
+  /* [256] = "#09090d", /1* background *1/ */
+  /* /1* [257] = "#ffc0c0", /2* foreground *2/ *1/ */
+  /* [257] = "#e3c7fc", /1* foreground *1/ */
+  /* [258] = "#c6b3e6", /1* foreground *1/ */
 };
 
 /*
@@ -397,6 +424,7 @@ static Key key[] = {
 	{ XK_Delete,        XK_ANY_MOD,     "\033[3~",      +1,    0},
 	{ XK_BackSpace,     XK_NO_MOD,      "\177",          0,    0},
 	{ XK_BackSpace,     Mod1Mask,       "\033\177",      0,    0},
+	{ XK_BackSpace,     ControlMask,    "\177",          0,    0},
 	{ XK_Home,          ShiftMask,      "\033[2J",       0,   -1},
 	{ XK_Home,          ShiftMask,      "\033[1;2H",     0,   +1},
 	{ XK_Home,          XK_ANY_MOD,     "\033[H",        0,   -1},
