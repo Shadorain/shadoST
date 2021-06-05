@@ -7,6 +7,7 @@
  */
 /* static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true"; */
 static char *font = "Source Code Pro:pixelsize=11:antialias=true:autohint=true";
+/* static char *font = "Jura:pixelsize=11:antialias=true:autohint=true"; */
 /* static char *font = "Binchotan_Sharp"; */
 /* static char *font = "Hack Nerd Font Mono:pixelsize=15:antialias=true:autohint=true"; */
 /* Spare fonts */
