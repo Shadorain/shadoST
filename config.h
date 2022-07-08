@@ -13,7 +13,7 @@ static char *font = "Source Code Pro:pixelsize=11:antialias=true:autohint=true";
 /* Spare fonts */
 static char *font2[] = {
 	/* "Inconsolata for Powerline:pixelsize=15:antialias=true:autohint=true", */
-	"Hack Nerd Font Mono:pixelsize=12:antialias=true:autohint=true",
+	"Fira Mono Regular Nerd Font:pixelsize=14:antialias=true:autohint=true",
 };
 
 /* disable bold, italic and roman fonts globally */
